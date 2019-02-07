@@ -1,6 +1,6 @@
 package com.raz.crud.unit;
 
-import com.raz.crud.Discount;
+import com.raz.crud.entity.Discount;
 import com.raz.crud.DiscountController;
 import com.raz.crud.DiscountRepository;
 import org.junit.Test;
@@ -28,10 +28,10 @@ public class DiscountControllerTest {
     public void testGetPaginated() {
         when(discountRepository.findAll()).thenReturn(Arrays.asList(
                 new Discount() {{
-                    setId(1);
+                    setId(1L);
                 }},
                 new Discount(){{
-                    setId(2);
+                    setId(2L);
                 }}));
 
         Iterable<Discount> discounts = underTest.getAllDiscounts(null, null);

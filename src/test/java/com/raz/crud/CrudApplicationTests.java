@@ -1,6 +1,7 @@
 package com.raz.crud;
 
 import com.jayway.restassured.RestAssured;
+import com.raz.crud.entity.Discount;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

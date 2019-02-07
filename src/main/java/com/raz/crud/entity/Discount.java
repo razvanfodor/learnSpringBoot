@@ -1,4 +1,4 @@
-package com.raz.crud;
+package com.raz.crud.entity;
 
 import javax.persistence.*;
 
@@ -7,17 +7,18 @@ import javax.persistence.*;
 public class Discount {
 
     @Id
-    @GeneratedValue
-    private long id;
+    @GeneratedValue(generator = "DISCOUNT_SEQ_GEN")
+    @SequenceGenerator(name = "DISCOUNT_SEQ_GEN", sequenceName = "DISCOUNT_SEQ", allocationSize = 10)
+    private Long id;
 
     @Column(name = "name")
     private String name;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

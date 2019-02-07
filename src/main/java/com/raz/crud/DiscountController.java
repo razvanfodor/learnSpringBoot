@@ -1,14 +1,15 @@
 package com.raz.crud;
 
+import com.raz.crud.async.AsynchronousJobBean;
+import com.raz.crud.entity.Discount;
+import com.raz.crud.transaction.TransactionsCheck;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
+import javax.transaction.Transactional;
 import java.util.Optional;
 
 @RestController
@@ -22,6 +23,9 @@ public class DiscountController {
 
     @Value("${application.apachePort}")
     private String apachePort;
+
+    @Inject
+    private TransactionsCheck transactionCheck;
 
     @RequestMapping("/")
     public String home(){
@@ -48,5 +52,13 @@ public class DiscountController {
         Optional<Discount> discount = discountRepository.findById(id);
         asyncJobInj.start(id);
         return discount;
+    }
+
+    @PutMapping("/discount")
+    @Transactional
+    public void addDiscount(@RequestBody Discount discount){
+        transactionCheck.saveNoTransaction(discount);
+        discount.setId(null);
+        transactionCheck.saveAndThrowExceptionNoTransaction(discount);
     }
 }

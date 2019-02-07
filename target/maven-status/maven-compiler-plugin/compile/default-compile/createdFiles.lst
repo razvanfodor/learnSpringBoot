@@ -1,0 +1,5 @@
+com/raz/crud/DiscountRepository.class
+com/raz/crud/transaction/TransactionsCheck.class
+com/raz/crud/DiscountController.class
+com/raz/crud/async/AsynchronousJobBean.class
+com/raz/crud/entity/Discount.class

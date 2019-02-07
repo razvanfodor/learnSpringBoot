@@ -1,4 +1,4 @@
-package com.raz.crud;
+package com.raz.crud.async;
 
 import org.springframework.scheduling.annotation.Async;
 

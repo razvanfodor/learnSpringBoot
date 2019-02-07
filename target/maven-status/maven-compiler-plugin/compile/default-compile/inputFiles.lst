@@ -1,5 +1,8 @@
-/home/raz/work/crap/crud/src/main/java/com/raz/crud/DiscountController.java
-/home/raz/work/crap/crud/src/main/java/com/raz/crud/CrudApplication.java
-/home/raz/work/crap/crud/src/main/java/com/raz/crud/AsynchronousJobBean.java
-/home/raz/work/crap/crud/src/main/java/com/raz/crud/DiscountRepository.java
-/home/raz/work/crap/crud/src/main/java/com/raz/crud/Discount.java
+/home/raz/work/crap/learnSpringBoot/src/main/java/com/raz/crud/DiscountRepository.java
+/home/raz/work/crap/learnSpringBoot/src/main/java/com/raz/crud/Discount.java
+/home/raz/work/crap/learnSpringBoot/src/main/java/com/raz/crud/config/ConfigInt.java
+/home/raz/work/crap/learnSpringBoot/src/main/java/com/raz/crud/TransactionsCheck.java
+/home/raz/work/crap/learnSpringBoot/src/main/java/com/raz/crud/config/ConfigDev.java
+/home/raz/work/crap/learnSpringBoot/src/main/java/com/raz/crud/Application.java
+/home/raz/work/crap/learnSpringBoot/src/main/java/com/raz/crud/AsynchronousJobBean.java
+/home/raz/work/crap/learnSpringBoot/src/main/java/com/raz/crud/DiscountController.java
