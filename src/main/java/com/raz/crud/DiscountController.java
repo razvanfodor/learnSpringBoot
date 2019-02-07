@@ -20,7 +20,7 @@ public class DiscountController {
     @Inject
     private AsynchronousJobBean asyncJobInj;
 
-    @Value("${apachePort}")
+    @Value("${application.apachePort}")
     private String apachePort;
 
     @RequestMapping("/")
