@@ -12,7 +12,7 @@ import javax.inject.Inject;
 import javax.transaction.Transactional;
 import java.util.Optional;
 
-@RestController
+@RestController()
 public class DiscountController {
 
     @Autowired
