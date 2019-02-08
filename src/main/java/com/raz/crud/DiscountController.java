@@ -3,6 +3,8 @@ package com.raz.crud;
 import com.raz.crud.async.AsynchronousJobBean;
 import com.raz.crud.entity.Discount;
 import com.raz.crud.transaction.TransactionsCheck;
+import org.slf4j.Logger;
+import org.slf4j.helpers.SubstituteLogger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.PageRequest;
@@ -27,6 +29,9 @@ public class DiscountController {
     @Inject
     private TransactionsCheck transactionCheck;
 
+    @Inject
+    private Logger logger;
+
     @RequestMapping("/")
     public String home(){
       return "Welcome Home man!";
@@ -40,7 +45,7 @@ public class DiscountController {
     @RequestMapping("/discount")
     public Iterable<Discount> getAllDiscounts(@RequestParam(required = false) Integer pageNumber,
                                               @RequestParam(required = false) Integer pageSize){
-        System.out.println("Apache port: " + apachePort);
+        logger.info("Apache port: " + apachePort);
         if (pageNumber == null || pageSize == null){
             return discountRepository.findAll();
         }

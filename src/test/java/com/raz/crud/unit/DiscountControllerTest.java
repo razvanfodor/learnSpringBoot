@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.slf4j.Logger;
 
 import java.util.Arrays;
 
@@ -23,6 +24,9 @@ public class DiscountControllerTest {
 
     @Mock
     private DiscountRepository discountRepository;
+
+    @Mock
+    private Logger logger;
 
     @Test
     public void testGetPaginated() {
