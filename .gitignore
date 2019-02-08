@@ -44,3 +44,6 @@ hs_err_pid*
 /nbdist/
 /.nb-gradle/
 /build/
+
+#RAZ
+/logs/
