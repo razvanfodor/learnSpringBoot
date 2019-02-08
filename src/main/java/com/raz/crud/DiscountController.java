@@ -4,7 +4,6 @@ import com.raz.crud.async.AsynchronousJobBean;
 import com.raz.crud.entity.Discount;
 import com.raz.crud.transaction.TransactionsCheck;
 import org.slf4j.Logger;
-import org.slf4j.helpers.SubstituteLogger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.PageRequest;
