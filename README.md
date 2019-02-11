@@ -5,9 +5,9 @@ Project for testing spring boot features
 ### Async jobs
 * Add @EnableAsync to the configuration class
 * Add @Async to the asynchronous method
-* Switch to JSR 330 (@Inject)
+### Switch to JSR 330 (@Inject)
 * Add javax.inject version as pom dependency
-* Externalizing configuration
+### Externalizing configuration
 * Configuration variables come from:
     * Application.properties
     * App variables
@@ -23,7 +23,7 @@ Project for testing spring boot features
 * @Transactional has to be set on the class/method where the transaction starts
 * There is no transaction by default when @transactional is not set. JPA starts its own transaction in this case.
 * logging.level.org.springframework.transaction.interceptor=TRACE (to log transaction details)
-* Logging -> how to change logging levels and destinations
+### Logging -> how to change logging levels and destinations
 * Logback is the default spring boot implementation
 * Use logback-spring.xml to configure logback
 * Useful properties in app properties
@@ -72,6 +72,7 @@ cxf.jaxrs.component-scan-packages=com.raz.crud.cxf,org.apache.cxf.jaxrs.swagger,
 * Provide JacksonJsonProvider as bean in the configuration class
 * Configure date format in the json provider (configuration class)
 ### Security
+* https://www.baeldung.com/spring-boot-security-autoconfiguration
 ### JPA and JDBC check
 ### Check mongoDB connection
 ### Caching
