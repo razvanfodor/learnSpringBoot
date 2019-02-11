@@ -2,6 +2,7 @@ package com.raz.crud;
 
 import com.raz.crud.async.AsynchronousJobBean;
 import com.raz.crud.entity.Discount;
+import com.raz.crud.jdbc.JDBCRepository;
 import com.raz.crud.transaction.TransactionsCheck;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,9 @@ public class DiscountController {
     @Inject
     private Logger logger;
 
+    @Inject
+    private JDBCRepository jdbcRepository;
+
     @RequestMapping("/")
     public String home() {
         return "Welcome Home man!";
@@ -47,6 +51,7 @@ public class DiscountController {
                                               @RequestParam(required = false) Integer pageSize,
                                               @RequestParam(required = false) String name) {
         logger.info("Apache port: " + apachePort);
+        jdbcRepository.printAll();
         if (!StringUtils.isEmpty(name)) {
             return discountRepository.selectByName(name);
         }

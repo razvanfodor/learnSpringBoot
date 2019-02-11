@@ -59,6 +59,7 @@ NOTE: apache.cxf seems to require a jre greater than 8. I could only make the te
 ~~~
 * Add jackson json provider (because cxf doesn't come with a json provider... wtf)
 ~~~
+
     <dependency>
         <groupId>com.fasterxml.jackson.jaxrs</groupId>
         <artifactId>jackson-jaxrs-json-provider</artifactId>
@@ -77,6 +78,11 @@ cxf.jaxrs.component-scan-packages=com.raz.crud.cxf,org.apache.cxf.jaxrs.swagger,
 * https://www.baeldung.com/spring-boot-security-autoconfiguration
 ### JPA and JDBC check
 * You can define named queries on the entity and map them via query-name -> method name to repository methods.
+* The PersistenceContext is available:
+~~~ 
+    @PersistenceContext
+    private EntityManager entityManager;
+~~~
 ### Check mongoDB connection
 ### Caching
 ### Messaging

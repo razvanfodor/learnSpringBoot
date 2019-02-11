@@ -3,6 +3,7 @@ package com.raz.crud.unit;
 import com.raz.crud.DiscountController;
 import com.raz.crud.DiscountRepository;
 import com.raz.crud.entity.Discount;
+import com.raz.crud.jdbc.JDBCRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -27,6 +28,9 @@ public class DiscountControllerTest {
 
     @Mock
     private Logger logger;
+
+    @Mock
+    private JDBCRepository jdbcRepository;
 
     @Test
     public void testGetPaginated() {
