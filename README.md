@@ -90,4 +90,5 @@ cxf.jaxrs.component-scan-packages=com.raz.crud.cxf,org.apache.cxf.jaxrs.swagger,
 * Annotate any method with @Cacheable("cacheName")
 ### Messaging
 ### Calling rest service
+* Spring boot configures a restTemplateBuilder that you can inject and then use to build a request template.
 ### Validation
