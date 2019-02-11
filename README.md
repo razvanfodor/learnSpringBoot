@@ -1,6 +1,8 @@
 # LearnSpringBoot
 Project for testing spring boot features
 
+NOTE: apache.cxf seems to require a jre greater than 8. I could only make the tests run with java 11.
+
 ## Lessons learned
 ### Async jobs
 * Add @EnableAsync to the configuration class
