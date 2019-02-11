@@ -76,6 +76,7 @@ cxf.jaxrs.component-scan-packages=com.raz.crud.cxf,org.apache.cxf.jaxrs.swagger,
 ### Security
 * https://www.baeldung.com/spring-boot-security-autoconfiguration
 ### JPA and JDBC check
+* You can define named queries on the entity and map them via query-name -> method name to repository methods.
 ### Check mongoDB connection
 ### Caching
 ### Messaging

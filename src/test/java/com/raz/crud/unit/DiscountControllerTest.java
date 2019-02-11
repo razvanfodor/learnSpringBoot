@@ -1,8 +1,8 @@
 package com.raz.crud.unit;
 
-import com.raz.crud.entity.Discount;
 import com.raz.crud.DiscountController;
 import com.raz.crud.DiscountRepository;
+import com.raz.crud.entity.Discount;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -38,7 +38,7 @@ public class DiscountControllerTest {
                     setId(2L);
                 }}));
 
-        Iterable<Discount> discounts = underTest.getAllDiscounts(null, null);
+        Iterable<Discount> discounts = underTest.getAllDiscounts(null, null, null);
         assertThat(discounts)
                 .hasSize(2)
                 .extracting(Discount::getId)
