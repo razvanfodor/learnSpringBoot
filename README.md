@@ -85,6 +85,9 @@ cxf.jaxrs.component-scan-packages=com.raz.crud.cxf,org.apache.cxf.jaxrs.swagger,
 ~~~
 ### Check mongoDB connection
 ### Caching
+* Add spring-boot-starter-cache as dependency
+* Annotate the config class with @EnableCaching
+* Annotate any method with @Cacheable("cacheName")
 ### Messaging
 ### Calling rest service
 ### Validation

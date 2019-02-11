@@ -7,6 +7,7 @@ import com.raz.crud.transaction.TransactionsCheck;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
@@ -61,6 +62,7 @@ public class DiscountController {
         return discountRepository.findAll(PageRequest.of(pageNumber, pageSize));
     }
 
+    @Cacheable("discountsById")
     @RequestMapping("/discount/{id}")
     public Optional<Discount> getDiscount(@PathVariable("id") Long id) {
         Optional<Discount> discount = discountRepository.findById(id);
