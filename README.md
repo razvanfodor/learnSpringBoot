@@ -92,3 +92,4 @@ cxf.jaxrs.component-scan-packages=com.raz.crud.cxf,org.apache.cxf.jaxrs.swagger,
 ### Calling rest service
 * Spring boot configures a restTemplateBuilder that you can inject and then use to build a request template.
 ### Validation
+* You have to add @Validated on the class that you want to validate and then use the validation annotations.
